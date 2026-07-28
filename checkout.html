@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Checkout — KantinKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header class="topbar"><a class="brand link-brand" href="index.html"><div class="logo">K</div><div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div></a><div class="checkout-progress"><span class="done">1 Keranjang</span><i></i><span class="active">2 Checkout</span><i></i><span>3 Pembayaran</span><i></i><span>4 Selesai</span></div></header>
+<main class="checkout-page">
+  <div class="breadcrumb"><a href="index.html">Beranda</a><span>›</span><span>Checkout</span></div>
+  <div class="checkout-layout">
+    <section>
+      <div class="checkout-card"><div class="card-title"><span class="number">1</span><div><h2>Pesanan kamu</h2><p>Pastikan menu dan jumlahnya sudah benar.</p></div></div><div id="checkoutItems"></div></div>
+      <div class="checkout-card"><div class="card-title"><span class="number">2</span><div><h2>Informasi pengambilan</h2><p>Pesanan akan disiapkan di kantin sekolah.</p></div></div>
+        <label class="field-label">Nama pemesan<input id="buyerName" value="rian S." placeholder="Nama lengkap"></label>
+        <div class="field-row"><label class="field-label">Kelas<input id="buyerClass" value="TKJ" placeholder="Contoh: TKJ"></label><label class="field-label">Waktu ambil<select id="pickup"><option>Istirahat 1 · 09.30–10.00</option><option>Istirahat 2 · 12.00–12.30</option><option>Setelah pulang · 14.00–15.00</option></select></label></div>
+        <label class="field-label">Catatan pesanan <small>(opsional)</small><textarea id="orderNote" placeholder="Contoh: Tolong pisahkan sambal."></textarea></label>
+      </div>
+    </section>
+    <aside class="order-summary"><span class="eyebrow">RINGKASAN</span><h2>Total pembayaran</h2><div id="summaryLines"></div><div class="summary-total"><span>Total</span><b id="grandTotal">Rp 0</b></div><button class="primary-btn" id="payBtn">Pilih Metode Pembayaran →</button><small>🔒 Data pesanan kamu aman.</small></aside>
+  </div>
+</main>
+<script src="customer.js"></script><script src="checkout.js"></script>
+</body>
+</html>

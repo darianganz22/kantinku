@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Detail Menu — KantinKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand link-brand" href="index.html"><div class="logo">K</div><div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div></a>
+  <div class="search"><span>⌕</span><input id="searchInput" placeholder="Cari makanan, minuman, atau camilan..."><kbd>Ctrl K</kbd></div>
+  <div class="top-actions"><button class="help-btn" onclick="location.href='index.html#bantuan'">◌ Bantuan</button><button class="cart-btn" onclick="location.href='checkout.html'">🛒 Keranjang <b id="cartCount">0</b></button></div>
+</header>
+<main class="page">
+  <div class="breadcrumb"><a href="index.html">Beranda</a><span>›</span><span id="crumb">Detail Menu</span></div>
+  <section class="detail-page">
+    <div class="detail-photo-wrap"><img id="detailImage" alt=""><span id="detailTag" class="detail-tag"></span></div>
+    <div class="detail-info">
+      <span id="detailCategory" class="eyebrow"></span><h1 id="detailName">Memuat menu...</h1>
+      <div class="rating-big"><strong id="detailRating"></strong><span>★★★★★</span><small id="detailSold"></small></div>
+      <p id="detailDesc"></p>
+      <div class="price-big" id="detailPrice"></div>
+      <div class="option-box"><label>Jumlah</label><div class="quantity"><button id="minus">−</button><b id="qty">1</b><button id="plus">+</button></div></div>
+      <div class="option-box"><label>Catatan untuk kantin <small>(opsional)</small></label><textarea id="note" placeholder="Contoh: sambalnya sedikit, tanpa es..."></textarea></div>
+      <button class="primary-btn" id="addBtn">Tambah ke Keranjang · <span></span></button>
+      <div class="trust"><span>✓</span> Harga sesuai daftar kantin <span>✓</span> Bisa dibayar digital <span>✓</span> Ambil tanpa antre panjang</div>
+    </div>
+  </section>
+  <section class="review-section">
+    <div class="section-title"><div><span class="eyebrow">ULASAN SISWA</span><h2>Yang sudah coba bilang...</h2></div><div class="overall"><b>4.9</b><span>★★★★★</span><small>128 ulasan</small></div></div>
+    <div class="reviews-grid">
+      <article class="review"><div class="review-head"><div class="avatar">AS</div><div><b>Aulia S.</b><small>XI IPA 1 · 2 hari lalu</small></div><span>★★★★★</span></div><p>“Enak, porsinya pas dan pesanannya cepat siap. Bakal pesan lagi!”</p></article>
+      <article class="review"><div class="review-head"><div class="avatar">DF</div><div><b>Dimas F.</b><small>X RPL 2 · 4 hari lalu</small></div><span>★★★★★</span></div><p>“Worth it untuk harga segini. Rasanya konsisten dan nggak ribet.”</p></article>
+      <article class="review"><div class="review-head"><div class="avatar">NR</div><div><b>Nadia R.</b><small>XI RPL 1 · 1 minggu lalu</small></div><span>★★★★☆</span></div><p>“Pesen lewat KantinKu jauh lebih nyaman daripada antre pas istirahat.”</p></article>
+    </div>
+  </section>
+</main>
+<div class="toast" id="toast"></div>
+<script src="customer.js"></script><script src="detail.js"></script>
+</body>
+</html>

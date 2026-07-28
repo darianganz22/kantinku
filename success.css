@@ -1,0 +1,2012 @@
+:root {
+
+    --orange: #f97316;
+    --orange-dark: #ea580c;
+    --orange-light: #fff7ed;
+    --orange-soft: #ffedd5;
+
+    --green: #16a34a;
+    --green-light: #f0fdf4;
+
+    --black: #1f2937;
+    --dark: #374151;
+    --gray: #6b7280;
+    --muted: #9ca3af;
+
+    --border: #e9e9e9;
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    background:
+        #fffaf7;
+
+    color:
+        var(--black);
+
+    min-height: 100vh;
+
+}
+
+
+button,
+a {
+
+    font-family: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    height: 76px;
+
+    background:
+        rgba(255,255,255,.97);
+
+    border-bottom:
+        1px solid #eeeeee;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+    backdrop-filter:
+        blur(12px);
+
+}
+
+
+.header-inner {
+
+    width:
+        min(1240px,92%);
+
+    height: 100%;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+}
+
+
+.brand-logo {
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f97316,
+            #fb923c
+        );
+
+    border-radius: 13px;
+
+}
+
+
+.brand-text h1 {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+}
+
+
+.brand-text h1 span {
+
+    color:
+        var(--orange);
+
+}
+
+
+.brand-text p {
+
+    color:
+        var(--gray);
+
+    font-size: 9px;
+
+    margin-top: 5px;
+
+}
+
+
+.header-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding:
+        7px 11px;
+
+    background:
+        var(--green-light);
+
+    border-radius: 30px;
+
+    color:
+        #15803d;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.online-dot {
+
+    width: 6px;
+    height: 6px;
+
+    background:
+        #22c55e;
+
+    border-radius: 50%;
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main {
+
+    width:
+        min(1120px,92%);
+
+    margin: auto;
+
+    padding:
+        45px 0 70px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.success-hero {
+
+    max-width: 650px;
+
+    margin:
+        0 auto 35px;
+
+    text-align: center;
+
+}
+
+
+.success-icon {
+
+    width: 66px;
+    height: 66px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+        #dcfce7;
+
+}
+
+
+.success-icon span {
+
+    width: 43px;
+    height: 43px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        var(--green);
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.success-label {
+
+    display: block;
+
+    color:
+        var(--green);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    margin-top: 17px;
+
+}
+
+
+.success-hero h1 {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    margin-top: 6px;
+
+}
+
+
+.success-hero > p {
+
+    max-width: 550px;
+
+    margin:
+        8px auto 0;
+
+    color:
+        var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   ORDER NUMBER
+===================================================== */
+
+.order-number-box {
+
+    position: relative;
+
+    width:
+        min(380px,100%);
+
+    margin:
+        20px auto 0;
+
+    padding:
+        15px 50px 15px 20px;
+
+    text-align: left;
+
+    background:
+        white;
+
+    border:
+        1px solid #fed7aa;
+
+    border-radius: 14px;
+
+}
+
+
+.order-number-box small {
+
+    display: block;
+
+    color:
+        var(--gray);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.order-number-box strong {
+
+    display: block;
+
+    color:
+        var(--orange-dark);
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: .5px;
+
+    margin-top: 3px;
+
+}
+
+
+.order-number-box button {
+
+    position: absolute;
+
+    right: 12px;
+    bottom: 13px;
+
+    border: none;
+
+    background:
+        var(--orange-light);
+
+    color:
+        var(--orange-dark);
+
+    padding:
+        7px 8px;
+
+    border-radius: 7px;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.success-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0,1fr) 330px;
+
+    gap: 20px;
+
+    align-items: start;
+
+}
+
+
+.success-left {
+
+    display: grid;
+
+    gap: 16px;
+
+}
+
+
+.success-right {
+
+    display: grid;
+
+    gap: 14px;
+
+    position: sticky;
+
+    top: 96px;
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.success-card,
+.status-card,
+.qr-card {
+
+    background:
+        white;
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 17px;
+
+}
+
+
+.success-card {
+
+    padding: 21px;
+
+}
+
+
+.card-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+}
+
+
+.card-heading > div {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.heading-icon {
+
+    width: 37px;
+    height: 37px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 10px;
+
+    background:
+        var(--orange-light);
+
+}
+
+
+.card-heading h2 {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 14px;
+
+}
+
+
+.card-heading p {
+
+    color:
+        var(--gray);
+
+    font-size: 8px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =====================================================
+   CUSTOMER
+===================================================== */
+
+.customer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 10px;
+
+}
+
+
+.customer-info {
+
+    padding:
+        12px;
+
+    background:
+        #fafafa;
+
+    border-radius: 9px;
+
+}
+
+
+.customer-info small {
+
+    display: block;
+
+    color:
+        var(--muted);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: .6px;
+
+}
+
+
+.customer-info strong {
+
+    display: block;
+
+    font-size: 10px;
+
+    margin-top: 5px;
+
+}
+
+
+.note-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+    padding:
+        10px 12px;
+
+    border:
+        1px solid #eeeeee;
+
+    border-radius: 9px;
+
+}
+
+
+.note-box > span {
+
+    font-size: 14px;
+
+}
+
+
+.note-box small {
+
+    color:
+        var(--muted);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+}
+
+
+.note-box p {
+
+    color:
+        var(--dark);
+
+    font-size: 9px;
+
+    margin-top: 2px;
+
+}
+
+
+/* =====================================================
+   ITEMS
+===================================================== */
+
+.order-items {
+
+    display: grid;
+
+    gap: 8px;
+
+}
+
+
+.order-item {
+
+    display: grid;
+
+    grid-template-columns:
+        55px 1fr auto;
+
+    gap: 10px;
+
+    align-items: center;
+
+    padding: 9px;
+
+    border:
+        1px solid #eeeeee;
+
+    border-radius: 10px;
+
+}
+
+
+.order-item img {
+
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+
+    border-radius: 9px;
+
+}
+
+
+.order-item-info h3 {
+
+    font-size: 10px;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+}
+
+
+.order-item-info small {
+
+    display: block;
+
+    color:
+        var(--gray);
+
+    font-size: 8px;
+
+    margin-top: 3px;
+
+}
+
+
+.order-item-info .quantity {
+
+    display: inline-block;
+
+    color:
+        var(--orange-dark);
+
+    background:
+        var(--orange-light);
+
+    padding:
+        3px 6px;
+
+    border-radius: 5px;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    margin-top: 5px;
+
+}
+
+
+.order-item-price {
+
+    text-align: right;
+
+    color:
+        var(--orange-dark);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   PRICE
+===================================================== */
+
+.price-summary {
+
+    margin-top: 17px;
+
+    padding-top: 14px;
+
+    border-top:
+        1px solid #eeeeee;
+
+}
+
+
+.price-summary > div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    color:
+        var(--gray);
+
+    font-size: 9px;
+
+}
+
+
+.price-summary strong {
+
+    color:
+        var(--dark);
+
+}
+
+
+.price-total {
+
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top:
+        1px solid #eeeeee;
+
+}
+
+
+.price-total span {
+
+    color:
+        var(--black) !important;
+
+    font-size: 11px !important;
+
+    font-weight: 800;
+
+}
+
+
+.price-total strong {
+
+    color:
+        var(--orange-dark) !important;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 18px !important;
+
+}
+
+
+/* =====================================================
+   PAYMENT
+===================================================== */
+
+.payment-result {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 13px;
+
+    background:
+        #fafafa;
+
+    border-radius: 11px;
+
+}
+
+
+.payment-result-logo {
+
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border:
+        1px solid #eeeeee;
+
+    border-radius: 9px;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+}
+
+
+.payment-result > div:nth-child(2) {
+
+    flex: 1;
+
+}
+
+
+.payment-result small {
+
+    display: block;
+
+    color:
+        var(--muted);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+}
+
+
+.payment-result strong {
+
+    display: block;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+
+}
+
+
+.payment-status {
+
+    padding:
+        6px 8px;
+
+    background:
+        #fff7ed;
+
+    color:
+        var(--orange-dark);
+
+    border-radius: 20px;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+}
+
+
+.payment-instruction {
+
+    margin-top: 12px;
+
+    padding:
+        12px;
+
+    background:
+        var(--orange-light);
+
+    border-radius: 10px;
+
+}
+
+
+.payment-instruction strong {
+
+    display: block;
+
+    font-size: 9px;
+
+}
+
+
+.payment-instruction p {
+
+    color:
+        var(--gray);
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    margin-top: 4px;
+
+}
+
+
+.payment-action {
+
+    border: none;
+
+    background: transparent;
+
+    color:
+        var(--orange-dark);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    margin-top: 8px;
+
+    padding: 0;
+
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-card {
+
+    padding:
+        20px;
+
+}
+
+
+.status-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+}
+
+
+.mini-label {
+
+    color:
+        var(--orange);
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+
+    font-weight: 800;
+
+}
+
+
+.status-header h2 {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+}
+
+
+.live-badge {
+
+    color:
+        var(--green);
+
+    background:
+        var(--green-light);
+
+    padding:
+        5px 7px;
+
+    border-radius: 20px;
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline {
+
+    margin-top: 22px;
+
+}
+
+
+.timeline-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    position: relative;
+
+}
+
+
+.timeline-dot {
+
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 50%;
+
+    color:
+        var(--muted);
+
+    background: white;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+.timeline-item.active .timeline-dot {
+
+    color: white;
+
+    background:
+        var(--green);
+
+    border-color:
+        var(--green);
+
+}
+
+
+.timeline-item.waiting .timeline-dot {
+
+    color:
+        var(--orange-dark);
+
+    background:
+        var(--orange-light);
+
+    border-color:
+        #fdba74;
+
+}
+
+
+.timeline-item strong {
+
+    display: block;
+
+    font-size: 9px;
+
+}
+
+
+.timeline-item small {
+
+    display: block;
+
+    color:
+        var(--gray);
+
+    font-size: 7px;
+
+    margin-top: 3px;
+
+}
+
+
+.timeline-line {
+
+    width: 1px;
+
+    height: 20px;
+
+    margin:
+        2px 0 2px 14px;
+
+    background:
+        #ddd;
+
+}
+
+
+.status-estimate {
+
+    margin-top: 18px;
+
+    padding:
+        9px;
+
+    text-align: center;
+
+    background:
+        #fafafa;
+
+    border-radius: 8px;
+
+    color:
+        var(--gray);
+
+    font-size: 8px;
+
+}
+
+
+.status-estimate strong {
+
+    color:
+        var(--dark);
+
+}
+
+
+/* =====================================================
+   QR
+===================================================== */
+
+.qr-card {
+
+    padding: 18px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff7ed,
+            #ffffff
+        );
+
+}
+
+
+.qr-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    text-align: left;
+
+}
+
+
+.qr-header h3 {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+
+}
+
+
+.qr-header > span {
+
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+
+    place-items: center;
+
+    background: white;
+
+    border-radius: 8px;
+
+}
+
+
+.fake-qr {
+
+    width: 130px;
+    height: 130px;
+
+    padding: 7px;
+
+    margin:
+        18px auto 10px;
+
+    background: white;
+
+    border:
+        1px solid #e5e5e5;
+
+}
+
+
+.qr-pattern {
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7,1fr);
+
+    gap: 3px;
+
+}
+
+
+.qr-pattern i {
+
+    background:
+        #111;
+
+}
+
+
+.qr-pattern i:nth-child(3n),
+.qr-pattern i:nth-child(5n) {
+
+    background:
+        transparent;
+
+}
+
+
+.qr-pattern i:nth-child(7n) {
+
+    background:
+        #111;
+
+}
+
+
+.pickup-code {
+
+    display: block;
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 17px;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--orange-dark);
+
+}
+
+
+.qr-card > p {
+
+    color:
+        var(--gray);
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================================
+   SUPPORT
+===================================================== */
+
+.support-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding:
+        14px;
+
+    background:
+        var(--orange-light);
+
+    border:
+        1px solid #fed7aa;
+
+    border-radius: 13px;
+
+}
+
+
+.support-avatar {
+
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    background: white;
+
+    border-radius: 10px;
+
+}
+
+
+.support-card strong {
+
+    display: block;
+
+    font-size: 10px;
+
+}
+
+
+.support-card p {
+
+    color:
+        var(--gray);
+
+    font-size: 7px;
+
+    margin-top: 3px;
+
+}
+
+
+.support-card button {
+
+    border: none;
+
+    padding: 0;
+
+    margin-top: 6px;
+
+    background: transparent;
+
+    color:
+        var(--orange-dark);
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.bottom-actions {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+}
+
+
+.primary-button,
+.secondary-button {
+
+    padding:
+        12px 17px;
+
+    border-radius: 9px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+.primary-button {
+
+    border: none;
+
+    color: white;
+
+    background:
+        var(--orange);
+
+}
+
+
+.primary-button:hover {
+
+    background:
+        var(--orange-dark);
+
+}
+
+
+.secondary-button {
+
+    background: white;
+
+    border:
+        1px solid #ddd;
+
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 300;
+
+    display: grid;
+
+    place-items: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15,23,42,.45);
+
+    backdrop-filter:
+        blur(5px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .25s;
+
+}
+
+
+.modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+.support-modal-card,
+.payment-modal-card {
+
+    position: relative;
+
+    width:
+        min(440px,100%);
+
+    padding: 27px;
+
+    background: white;
+
+    border-radius: 19px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.2);
+
+}
+
+
+.modal-close {
+
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+}
+
+
+.modal-icon {
+
+    width: 45px;
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    background:
+        var(--orange-light);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+
+    margin-bottom: 13px;
+
+}
+
+
+.support-modal-card h2,
+.payment-modal-card h2 {
+
+    font-family:
+        "Poppins",
+        sans-serif;
+
+    font-size: 20px;
+
+    margin-top: 5px;
+
+}
+
+
+.support-modal-card > p,
+.payment-modal-card > p {
+
+    color:
+        var(--gray);
+
+    font-size: 9px;
+
+    line-height: 1.6;
+
+    margin:
+        5px 0 16px;
+
+}
+
+
+.modal-options {
+
+    display: grid;
+
+    gap: 8px;
+
+}
+
+
+.modal-options button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 11px;
+
+    border:
+        1px solid #eee;
+
+    border-radius: 9px;
+
+    background: white;
+
+    text-align: left;
+
+}
+
+
+.modal-options button:hover {
+
+    background:
+        var(--orange-light);
+
+    border-color:
+        #fdba74;
+
+}
+
+
+.modal-options button div {
+
+    flex: 1;
+
+}
+
+
+.modal-options strong {
+
+    display: block;
+
+    font-size: 9px;
+
+}
+
+
+.modal-options small {
+
+    display: block;
+
+    color:
+        var(--gray);
+
+    font-size: 7px;
+
+    margin-top: 2px;
+
+}
+
+
+.modal-hours {
+
+    margin-top: 11px;
+
+    padding: 8px;
+
+    text-align: center;
+
+    color:
+        #15803d;
+
+    background:
+        var(--green-light);
+
+    border-radius: 8px;
+
+    font-size: 7px;
+
+}
+
+
+/* =====================================================
+   PAYMENT MODAL
+===================================================== */
+
+.payment-modal-icon {
+
+    background:
+        #eff6ff;
+
+}
+
+
+.payment-steps {
+
+    display: grid;
+
+    gap: 8px;
+
+}
+
+
+.payment-step {
+
+    display: flex;
+
+    gap: 9px;
+
+    padding: 10px;
+
+    background:
+        #fafafa;
+
+    border-radius: 9px;
+
+}
+
+
+.payment-step-number {
+
+    width: 23px;
+    height: 23px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    color: white;
+
+    background:
+        var(--orange);
+
+    border-radius: 50%;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+}
+
+
+.payment-step strong {
+
+    display: block;
+
+    font-size: 9px;
+
+}
+
+
+.payment-step p {
+
+    color:
+        var(--gray);
+
+    font-size: 8px;
+
+    line-height: 1.5;
+
+    margin-top: 2px;
+
+}
+
+
+.modal-done-button {
+
+    width: 100%;
+
+    border: none;
+
+    background:
+        var(--orange);
+
+    color: white;
+
+    border-radius: 9px;
+
+    padding: 11px;
+
+    margin-top: 15px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+/* =====================================================
+   PRINT
+===================================================== */
+
+@media print {
+
+    .header,
+    .bottom-actions,
+    .support-card,
+    .qr-card,
+    .success-right {
+
+        display: none !important;
+
+    }
+
+
+    body {
+
+        background: white;
+
+    }
+
+
+    main {
+
+        width: 100%;
+
+        padding: 20px;
+
+    }
+
+
+    .success-grid {
+
+        display: block;
+
+    }
+
+
+    .success-card {
+
+        box-shadow: none;
+
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:900px) {
+
+    .success-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .success-right {
+
+        position: static;
+
+    }
+
+
+    .customer-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:600px) {
+
+    main {
+
+        padding-top: 30px;
+
+    }
+
+
+    .success-hero h1 {
+
+        font-size: 23px;
+
+    }
+
+
+    .customer-grid {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .order-item {
+
+        grid-template-columns:
+            50px 1fr;
+
+    }
+
+
+    .order-item-price {
+
+        grid-column:
+            2;
+
+        text-align: left;
+
+    }
+
+
+    .bottom-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        width: 100%;
+
+        text-align: center;
+
+    }
+
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pembayaran — KantinKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header class="topbar"><a class="brand link-brand" href="index.html"><div class="logo">K</div><div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div></a><div class="checkout-progress"><span class="done">1 Keranjang</span><i></i><span class="done">2 Checkout</span><i></i><span class="active">3 Pembayaran</span><i></i><span>4 Selesai</span></div></header>
+<main class="payment-page">
+  <div class="breadcrumb"><a href="index.html">Beranda</a><span>›</span><a href="checkout.html">Checkout</a><span>›</span><span>Pembayaran</span></div>
+  <div class="payment-layout">
+    <section class="payment-card"><span class="eyebrow">METODE PEMBAYARAN</span><h1>Pilih cara bayar favoritmu</h1><p class="muted">Pembayaran digital dibuat sederhana dan cepat.</p>
+      <div class="pay-tabs"><button class="pay-tab active" data-group="ewallet">E-Wallet</button><button class="pay-tab" data-group="bank">Transfer Bank</button><button class="pay-tab" data-group="qris">QRIS</button></div>
+      <div class="methods" id="methods"></div>
+      <button class="primary-btn" id="confirmPay">Bayar Sekarang · <span id="payAmount">Rp 0</span></button>
+      <small class="secure-note">🔒 Simulasi frontend — gateway pembayaran dapat dihubungkan ke backend/payment gateway saat tahap integrasi.</small>
+    </section>
+    <aside class="payment-summary"><span class="eyebrow">PESANAN</span><div id="paymentItems"></div><div class="summary-total"><span>Total</span><b id="paymentTotal">Rp 0</b></div></aside>
+  </div>
+</main>
+<div class="modal" id="qrModal"><div class="qr-card"><button class="modal-close" id="closeQR">×</button><span class="eyebrow">QRIS</span><h2>Scan untuk membayar</h2><div class="fake-qr">▦<span>QRIS</span></div><b id="qrAmount">Rp 0</b><p>Buka aplikasi e-wallet atau mobile banking lalu scan QR di atas.</p><button class="primary-btn" id="paidBtn">Saya Sudah Bayar</button></div></div>
+<script src="customer.js"></script><script src="payment.js"></script>
+</body>
+</html>

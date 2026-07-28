@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Status Pesanan — KantinKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header class="topbar"><a class="brand link-brand" href="index.html"><div class="logo">K</div><div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div></a><div class="top-actions"><button class="help-btn" onclick="location.href='history.html'">▣ Riwayat</button><button class="help-btn" onclick="location.href='index.html'">← Kembali ke menu</button></div></header>
+<main class="status-page">
+  <section class="status-card">
+    <div class="success-icon">✓</div><span class="eyebrow">PESANAN BERHASIL</span><h1>Pesananmu sedang diproses!</h1><p class="muted">Simpan nomor pesanan ini. Kamu akan mendapat notifikasi saat makanan siap diambil.</p>
+    <div class="order-code"><span>Nomor pesanan</span><b id="orderCode">KN-000000</b><button id="copyCode">Salin</button></div>
+    <div class="timeline">
+      <div class="timeline-step active"><i>✓</i><div><b>Pesanan diterima</b><small>Pesanan sudah masuk ke kantin</small></div></div>
+      <div class="timeline-step active"><i>✓</i><div><b>Sedang disiapkan</b><small>Penjual sedang menyiapkan pesanan</small></div></div>
+      <div class="timeline-step current"><i>3</i><div><b>Menunggu diambil</b><small>Notifikasi akan muncul saat siap</small></div></div>
+      <div class="timeline-step"><i>4</i><div><b>Selesai</b><small>Pesanan sudah diterima</small></div></div>
+    </div>
+    <div class="pickup-box"><span>📍</span><div><b>Tempat pengambilan</b><p>Loket KantinKu · Area kantin sekolah</p></div></div>
+    <div class="status-actions"><button class="primary-btn" onclick="location.href='index.html'">Pesan Lagi</button><button class="secondary-btn" onclick="location.href='history.html'">▣ Riwayat Pesanan</button></div>
+  </section>
+  <aside class="mini-summary"><span class="eyebrow">RINGKASAN PESANAN</span><div id="statusItems"></div><div class="summary-total"><span>Total</span><b id="statusTotal">Rp 0</b></div></aside>
+</main>
+<div class="toast" id="toast"></div>
+<script src="customer.js"></script><script src="status.js"></script>
+</body>
+</html>

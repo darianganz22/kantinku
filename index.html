@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KantinKu — Kantin Digital Sekolah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="customer.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">K</div>
+      <div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div>
+    </div>
+
+    <div class="search">
+      <span>⌕</span>
+      <input id="searchInput" type="search" placeholder="Cari makanan, minuman, atau camilan...">
+      <kbd>Ctrl K</kbd>
+    </div>
+
+    <div class="top-actions">
+      <button class="help-btn" id="helpBtn">◌ Bantuan</button>
+      <button class="cart-btn" id="cartBtn">🛒 <span>Keranjang</span><b id="cartCount">0</b></button>
+      <div class="user">
+        <div class="user-avatar">KS</div>
+        <div><strong>rian </strong> S.</strong><small>TKJ</small></div>
+        <span>⌄</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="pill">🍊 PESAN MAKANAN TANPA ANTRE</span>
+        <h1>Hai, rian!<br>Mau makan apa <em>hari ini?</em></h1>
+        <p>Pesan dari kelas, pilih pembayaran favoritmu, lalu tinggal ambil saat sudah siap.</p>
+        <button class="hero-btn" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Lihat Menu <span>→</span></button>
+      </div>
+      <div class="hero-art">
+        <div class="circle c1"></div><div class="circle c2"></div>
+        <div class="food-card food-one"><span>🍜</span><b>Mie Goreng</b><small>Rp 12.000</small></div>
+        <div class="food-card food-two"><span>🥤</span><b>Es Teh</b><small>Rp 5.000</small></div>
+        <div class="food-card food-three"><span>🍗</span><b>Ayam Geprek</b><small>Rp 16.000</small></div>
+        <div class="hero-plate">🍛</div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <button class="category active" data-category="Semua"><span>🍽️</span><b>Semua</b></button>
+      <button class="category" data-category="Makanan"><span>🍛</span><b>Makanan</b></button>
+      <button class="category" data-category="Minuman"><span>🥤</span><b>Minuman</b></button>
+      <button class="category" data-category="Camilan"><span>🍞</span><b>Camilan</b></button>
+      <button class="category" data-category="Paket Hemat"><span>🎁</span><b>Paket Hemat</b></button>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div><span class="eyebrow">MENU KANTIN</span><h2>Makan enak, harga bersahabat</h2><p>Pilihan favorit siswa dengan harga ramah kantong.</p></div>
+        <div class="sort">
+          <button class="sort-btn active" data-sort="popular">Best Seller</button>
+          <button class="sort-btn" data-sort="cheap">Harga Termurah</button>
+          <button class="sort-btn" data-sort="rating">Rating Tertinggi</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <div class="empty" id="emptyState" hidden>
+        <div>🔎</div><h3>Menu tidak ditemukan</h3><p>Coba kata kunci lain atau pilih kategori berbeda.</p>
+      </div>
+    </section>
+
+    <section class="promo-strip">
+      <div><span class="promo-icon">🎟️</span><div><b>Jajan hemat hari ini!</b><p>Dapatkan potongan Rp 3.000 untuk pembelian minimal Rp 20.000.</p></div></div>
+      <button onclick="showToast('Kode promo HEMAT3 berhasil disalin')">Pakai Promo <span>→</span></button>
+    </section>
+
+    <section class="how">
+      <div class="section-heading center"><span class="eyebrow">GAMPANG BANGET</span><h2>Pesan dalam 3 langkah</h2></div>
+      <div class="steps">
+        <div><i>01</i><span>🛍️</span><h3>Pilih Menu</h3><p>Temukan makanan favoritmu dan masukkan ke keranjang.</p></div>
+        <div><i>02</i><span>💳</span><h3>Bayar</h3><p>Pilih QRIS, e-wallet, atau transfer bank sesuai kebutuhan.</p></div>
+        <div><i>03</i><span>🎒</span><h3>Ambil Pesanan</h3><p>Tunggu notifikasi siap diambil, lalu datang ke kasir.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><div class="logo">K</div><div><b>KantinKu</b><small>Pesan mudah, makan nyaman.</small></div></div>
+    <div><b>Butuh bantuan?</b><span>Customer Service · Senin–Jumat 07.00–16.00</span></div>
+    <button id="footerHelp">Hubungi CS →</button>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head"><div><span class="eyebrow">PESANAN KAMU</span><h2>Keranjang</h2></div><button id="closeCart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-bottom">
+      <div class="promo-input"><input placeholder="Kode promo"><button>Terapkan</button></div>
+      <div class="summary"><span>Subtotal</span><b id="cartTotal">Rp 0</b></div>
+      <button class="checkout-btn" id="checkoutBtn">Lanjut ke Pembayaran →</button>
+      <small class="secure">🔒 Pembayaran aman dan terenkripsi</small>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="modal" id="detailModal">
+    <div class="detail-card">
+      <button class="modal-close" onclick="closeDetail()">×</button>
+      <img id="detailImage" src="" alt="">
+      <div class="detail-content">
+        <span id="detailCategory" class="category-tag"></span>
+        <h2 id="detailName"></h2>
+        <div class="rating-line"><b id="detailRating"></b> <span>★★★★★</span> <small id="detailSold"></small></div>
+        <p id="detailDescription"></p>
+        <div class="detail-price" id="detailPrice"></div>
+        <div class="qty"><button id="minus">−</button><b id="detailQty">1</b><button id="plus">+</button></div>
+        <button class="add-detail" id="detailAdd">Tambah ke Keranjang · <span></span></button>
+        <div class="reviews"><b>Ulasan siswa</b><p>“Enak, porsinya pas dan pesanannya cepat siap!” — Aulia S.</p><p>“Worth it untuk harga segini 👍” — Dimas F.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="helpModal">
+    <div class="help-card">
+      <button class="modal-close" id="closeHelp">×</button>
+      <div class="cs-icon">💬</div><span class="eyebrow">CUSTOMER SERVICE</span><h2>Ada kendala pemesanan?</h2>
+      <p>Tim KantinKu siap membantu soal pembayaran, pesanan, atau menu.</p>
+      <div class="cs-options"><button onclick="showToast('Chat CS dibuka')">💬 Chat Customer Service</button><button onclick="showToast('Demo: WhatsApp CS dibuka')">📱 WhatsApp CS</button></div>
+      <small>Jam layanan: Senin–Jumat, 07.00–16.00</small>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="customer.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

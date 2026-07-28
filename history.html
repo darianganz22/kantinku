@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Riwayat Pesanan — KantinKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand link-brand" href="index.html"><div class="logo">K</div><div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div></a>
+<div class="search"><span>⌕</span><input placeholder="Cari makanan, minuman, atau camilan..."><kbd>Ctrl K</kbd></div>
+<div class="top-actions"><button class="help-btn" onclick="location.href='help.html'">◌ Bantuan</button><button class="cart-btn" onclick="location.href='checkout.html'">🛒 Keranjang <b id="cartCount">0</b></button></div>
+</header>
+<main class="account-page">
+<div class="breadcrumb"><a href="index.html">Beranda</a><span>›</span><span>Riwayat Pesanan</span></div>
+<div class="account-head"><div><span class="eyebrow">AKUN SAYA</span><h1>Riwayat Pesanan</h1></div></div>
+<div class="account-layout">
+<nav class="account-nav"><a href="order-status.html">◷ Pesanan Aktif</a><a class="active" href="history.html">▣ Riwayat Pesanan</a><a href="profile.html">◎ Profil Saya</a><a href="help.html">? Bantuan & CS</a></nav>
+<section class="history-card">
+<div class="history-filter"><button class="active" data-filter="all">Semua</button><button data-filter="done">Selesai</button><button data-filter="process">Diproses</button></div>
+<div id="historyList"></div>
+</section>
+</div>
+</main>
+<script src="customer.js"></script><script src="history.js"></script>
+</body>
+</html>

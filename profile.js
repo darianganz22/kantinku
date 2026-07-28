@@ -1,0 +1,2 @@
+const fields=["name","class","email","phone"];const saved=JSON.parse(localStorage.getItem("kantinku_profile")||"null");if(saved)fields.forEach(k=>{if(saved[k])document.querySelector("#"+k).value=saved[k]});
+document.querySelector("#saveProfile").onclick=()=>{const p={};fields.forEach(k=>p[k]=document.querySelector("#"+k).value);localStorage.setItem("kantinku_profile",JSON.stringify(p));showToast("Profil berhasil disimpan")};

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bantuan & Customer Service — KantinKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header class="topbar"><a class="brand link-brand" href="index.html"><div class="logo">K</div><div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div></a><div class="top-actions"><button class="cart-btn" onclick="location.href='checkout.html'">🛒 Keranjang <b id="cartCount">0</b></button></div></header>
+<main class="account-page"><div class="breadcrumb"><a href="index.html">Beranda</a><span>›</span><span>Bantuan</span></div>
+<div class="account-head"><div><span class="eyebrow">SUPPORT</span><h1>Butuh bantuan?</h1></div></div>
+<div class="help-grid"><section class="help-card"><span class="eyebrow">FAQ</span><h2>Pertanyaan yang sering ditanyakan</h2>
+<div class="faq"><b>Bagaimana cara memesan makanan?</b><p>Pilih menu, tentukan jumlah, masuk ke checkout, lalu pilih metode pembayaran yang tersedia.</p></div>
+<div class="faq"><b>Kapan pesanan bisa diambil?</b><p>Pilih waktu pengambilan saat checkout. Status akan berubah ketika pesanan sudah disiapkan.</p></div>
+<div class="faq"><b>Saya sudah bayar tapi status belum berubah.</b><p>Simpan nomor pesanan dan hubungi customer service. Tim kantin dapat membantu mengecek transaksi.</p></div>
+<div class="faq"><b>Bisa membatalkan pesanan?</b><p>Segera hubungi CS sebelum pesanan masuk tahap disiapkan. Pembatalan mengikuti kebijakan kantin sekolah.</p></div>
+</section>
+<aside><div class="help-card cs-box"><div class="cs-icon">💬</div><span class="eyebrow">CUSTOMER SERVICE</span><h3>Tim KantinKu siap membantu</h3><p>Kalau ada kendala soal pesanan, pembayaran, atau pengambilan, jangan khawatir. Hubungi petugas kantin melalui layanan bantuan.</p><button class="primary-btn" id="chatBtn">Chat Customer Service</button></div>
+<div class="help-card quick-links"><a href="history.html">▣ Lihat riwayat pesanan</a><a href="profile.html">◎ Kelola profil siswa</a><a href="index.html">⌂ Kembali ke menu</a></div></aside>
+</div></main>
+<div class="modal" id="chatModal"><div class="qr-card" style="text-align:left"><button class="modal-close" id="closeChat">×</button><span class="eyebrow">CUSTOMER SERVICE</span><h2>Halo! 👋</h2><p style="font-size:10px;color:#7b8490;line-height:1.7">Sampaikan kendala kamu. Untuk versi produksi, area ini bisa dihubungkan ke WhatsApp, live chat, atau sistem tiket sekolah.</p><textarea id="chatText" placeholder="Tulis kendala kamu..." style="width:100%;height:100px;border:1px solid var(--line);border-radius:8px;padding:10px;resize:none"></textarea><button class="primary-btn" id="sendChat" style="margin-top:10px">Kirim Permintaan</button></div></div>
+<div class="toast" id="toast"></div><script src="customer.js"></script><script src="help.js"></script>
+</body></html>

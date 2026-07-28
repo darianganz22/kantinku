@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Pesanan Berhasil - KantinKu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="success.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+                🍴
+            </div>
+
+            <div class="brand-text">
+
+                <h1>
+                    Kantin<span>Ku</span>
+                </h1>
+
+                <p>
+                    Kantin Digital Sekolah
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <div class="header-status">
+
+            <span class="online-dot"></span>
+
+            Sistem Online
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- SUCCESS HERO -->
+
+    <section class="success-hero">
+
+        <div class="success-icon">
+
+            <span>
+                ✓
+            </span>
+
+        </div>
+
+
+        <span class="success-label">
+            PESANAN BERHASIL DIBUAT
+        </span>
+
+
+        <h1>
+            Pesanan kamu sudah masuk! 🎉
+        </h1>
+
+
+        <p>
+            Tenang, pesananmu sedang diteruskan ke kantin.
+            Simpan nomor pesanan berikut untuk memudahkan pengecekan.
+        </p>
+
+
+        <!-- ORDER NUMBER -->
+
+        <div class="order-number-box">
+
+            <small>
+                NOMOR PESANAN
+            </small>
+
+            <strong id="orderId">
+                KK-000000
+            </strong>
+
+
+            <button
+                id="copyOrderId"
+                title="Salin nomor pesanan"
+            >
+                ⧉ Salin
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         ORDER GRID
+    ================================================= -->
+
+    <div class="success-grid">
+
+
+        <!-- LEFT -->
+
+        <div class="success-left">
+
+
+            <!-- CUSTOMER -->
+
+            <section class="success-card customer-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="heading-icon">
+                            👤
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Data Pemesan
+                            </h2>
+
+                            <p>
+                                Informasi pengambilan pesanan
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="customer-grid">
+
+
+                    <div class="customer-info">
+
+                        <small>
+                            NAMA
+                        </small>
+
+                        <strong id="customerName">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-info">
+
+                        <small>
+                            KELAS
+                        </small>
+
+                        <strong id="customerClass">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-info">
+
+                        <small>
+                            ABSEN
+                        </small>
+
+                        <strong id="customerNumber">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="customer-info">
+
+                        <small>
+                            PENGAMBILAN
+                        </small>
+
+                        <strong id="pickupMethod">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="note-box"
+                    id="noteBox"
+                >
+
+                    <span>
+                        📝
+                    </span>
+
+                    <div>
+
+                        <small>
+                            CATATAN PESANAN
+                        </small>
+
+                        <p id="orderNote">
+                            Tidak ada catatan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ORDER ITEMS -->
+
+            <section class="success-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="heading-icon">
+                            🛒
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Detail Pesanan
+                            </h2>
+
+                            <p id="itemCount">
+                                0 item
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="order-items"
+                    id="orderItems"
+                ></div>
+
+
+                <div class="price-summary">
+
+                    <div>
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="subtotal">
+                            Rp0
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Biaya antar
+                        </span>
+
+                        <strong id="deliveryFee">
+                            Gratis
+                        </strong>
+
+                    </div>
+
+
+                    <div class="price-total">
+
+                        <span>
+                            Total Pembayaran
+                        </span>
+
+                        <strong id="totalPrice">
+                            Rp0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- PAYMENT -->
+
+            <section class="success-card payment-info-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <span class="heading-icon">
+                            💳
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Pembayaran
+                            </h2>
+
+                            <p>
+                                Metode pembayaran yang dipilih
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-result">
+
+                    <div
+                        class="payment-result-logo"
+                        id="paymentLogo"
+                    >
+                        QR
+                    </div>
+
+
+                    <div>
+
+                        <small>
+                            METODE PEMBAYARAN
+                        </small>
+
+                        <strong id="paymentMethod">
+                            QRIS
+                        </strong>
+
+                    </div>
+
+
+                    <span
+                        class="payment-status"
+                        id="paymentStatus"
+                    >
+                        Menunggu Pembayaran
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="payment-instruction"
+                    id="paymentInstruction"
+                >
+
+                    <strong>
+                        Instruksi Pembayaran
+                    </strong>
+
+                    <p>
+                        Selesaikan pembayaran sesuai metode
+                        yang kamu pilih.
+                    </p>
+
+                    <button
+                        id="paymentAction"
+                        class="payment-action"
+                    >
+                        Lihat Instruksi Pembayaran →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- RIGHT -->
+
+        <aside class="success-right">
+
+
+            <!-- STATUS -->
+
+            <section class="status-card">
+
+                <div class="status-header">
+
+                    <div>
+
+                        <span class="mini-label">
+                            STATUS PESANAN
+                        </span>
+
+                        <h2>
+                            Perjalanan Pesanan
+                        </h2>
+
+                    </div>
+
+                    <span class="live-badge">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item active">
+
+                        <div class="timeline-dot">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Pesanan Dibuat
+                            </strong>
+
+                            <small id="timeCreated">
+                                Baru saja
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-line"></div>
+
+
+                    <div class="timeline-item active waiting">
+
+                        <div class="timeline-dot">
+                            2
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Menunggu Pembayaran
+                            </strong>
+
+                            <small>
+                                Silakan selesaikan pembayaran
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-line"></div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot">
+                            3
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Sedang Diproses
+                            </strong>
+
+                            <small>
+                                Kantin akan menyiapkan pesanan
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-line"></div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot">
+                            4
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Siap Diambil
+                            </strong>
+
+                            <small>
+                                Pesanan siap kamu ambil
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="status-estimate">
+
+                    ⏱️ Estimasi pesanan:
+                    <strong>
+                        10–20 menit
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QR MOCKUP -->
+
+            <section
+                class="qr-card"
+                id="qrCard"
+            >
+
+                <div class="qr-header">
+
+                    <div>
+
+                        <span class="mini-label">
+                            TUNJUKKAN KE KASIR
+                        </span>
+
+                        <h3>
+                            Kode Pengambilan
+                        </h3>
+
+                    </div>
+
+                    <span>
+                        🔐
+                    </span>
+
+                </div>
+
+
+                <div class="fake-qr">
+
+                    <div class="qr-pattern">
+
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                        <i></i>
+
+                    </div>
+
+                </div>
+
+
+                <strong
+                    id="pickupCode"
+                    class="pickup-code"
+                >
+                    KK5832
+                </strong>
+
+
+                <p>
+                    Tunjukkan kode ini kepada petugas
+                    kantin saat mengambil pesanan.
+                </p>
+
+            </section>
+
+
+
+            <!-- SUPPORT -->
+
+            <section class="support-card">
+
+                <div class="support-avatar">
+                    🎧
+                </div>
+
+                <div>
+
+                    <strong>
+                        Butuh bantuan?
+                    </strong>
+
+                    <p>
+                        Ada masalah dengan pesananmu?
+                    </p>
+
+                    <button onclick="openSupport()">
+                        Hubungi Customer Service →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+    </div>
+
+
+
+    <!-- =================================================
+         BOTTOM ACTION
+    ================================================= -->
+
+    <section class="bottom-actions">
+
+        <a
+            href="index.html"
+            class="secondary-button"
+        >
+            ← Kembali ke Menu
+        </a>
+
+
+        <button
+            class="primary-button"
+            onclick="printOrder()"
+        >
+            🖨 Cetak Detail Pesanan
+        </button>
+
+    </section>
+
+</main>
+
+
+
+<!-- =====================================================
+     SUPPORT MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="supportModal"
+>
+
+    <div class="support-modal-card">
+
+
+        <button
+            class="modal-close"
+            onclick="closeSupport()"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-icon">
+            🎧
+        </div>
+
+
+        <span class="mini-label">
+            CUSTOMER SERVICE
+        </span>
+
+
+        <h2>
+            Kami siap membantu!
+        </h2>
+
+
+        <p>
+            Pilih kendala yang kamu alami dan tim
+            KantinKu akan membantu.
+        </p>
+
+
+        <div class="modal-options">
+
+
+            <button>
+
+                💬
+
+                <div>
+
+                    <strong>
+                        Chat Customer Service
+                    </strong>
+
+                    <small>
+                        Respon sekitar 1–5 menit
+                    </small>
+
+                </div>
+
+                →
+
+            </button>
+
+
+            <button>
+
+                📦
+
+                <div>
+
+                    <strong>
+                        Kendala Pesanan
+                    </strong>
+
+                    <small>
+                        Pesanan salah, terlambat, atau belum diterima
+                    </small>
+
+                </div>
+
+                →
+
+            </button>
+
+
+            <button>
+
+                💳
+
+                <div>
+
+                    <strong>
+                        Kendala Pembayaran
+                    </strong>
+
+                    <small>
+                        Pembayaran gagal atau belum terverifikasi
+                    </small>
+
+                </div>
+
+                →
+
+            </button>
+
+
+        </div>
+
+
+        <div class="modal-hours">
+            🟢 CS aktif · Senin–Jumat · 07.00–15.00
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     PAYMENT MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="paymentModal"
+>
+
+    <div class="payment-modal-card">
+
+
+        <button
+            class="modal-close"
+            onclick="closePaymentModal()"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-icon payment-modal-icon">
+            💳
+        </div>
+
+
+        <span class="mini-label">
+            INSTRUKSI PEMBAYARAN
+        </span>
+
+
+        <h2 id="modalPaymentTitle">
+            QRIS
+        </h2>
+
+
+        <p id="modalPaymentDescription">
+            Selesaikan pembayaran menggunakan metode yang dipilih.
+        </p>
+
+
+        <div
+            class="payment-steps"
+            id="paymentSteps"
+        ></div>
+
+
+        <button
+            class="modal-done-button"
+            onclick="closePaymentModal()"
+        >
+            Saya Mengerti
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="success.js"></script>
+
+</body>
+
+</html>

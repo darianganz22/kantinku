@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Detail Menu - KantinKu</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="detail.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="header-inner">
+
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+                🍴
+            </div>
+
+            <div class="brand-text">
+
+                <h1>
+                    Kantin<span>Ku</span>
+                </h1>
+
+                <p>
+                    Kantin Digital Sekolah
+                </p>
+
+            </div>
+
+        </a>
+
+
+        <div class="header-right">
+
+
+            <button
+                class="help-button"
+                id="supportButton"
+            >
+
+                <span>🎧</span>
+
+                <div>
+
+                    <small>
+                        Butuh bantuan?
+                    </small>
+
+                    <strong>
+                        Customer Service
+                    </strong>
+
+                </div>
+
+            </button>
+
+
+            <button
+                class="cart-button"
+                onclick="goToCart()"
+            >
+
+                🛒
+
+                <span>
+                    Keranjang
+                </span>
+
+                <b id="cartCount">
+                    0
+                </b>
+
+            </button>
+
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     BREADCRUMB
+===================================================== -->
+
+<main>
+
+
+    <div class="breadcrumb-container">
+
+        <a href="index.html">
+            Beranda
+        </a>
+
+        <span>›</span>
+
+        <span id="breadcrumbCategory">
+            Makanan
+        </span>
+
+        <span>›</span>
+
+        <strong id="breadcrumbName">
+            Detail Menu
+        </strong>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PRODUCT DETAIL
+    ================================================= -->
+
+    <section class="product-detail">
+
+
+        <!-- IMAGE -->
+
+        <div class="product-visual">
+
+
+            <div class="image-wrapper">
+
+                <img
+                    id="productImage"
+                    src=""
+                    alt=""
+                >
+
+
+                <div
+                    class="image-badge"
+                    id="productBadge"
+                >
+                    Best Seller
+                </div>
+
+
+                <button
+                    class="image-favorite"
+                    id="favoriteButton"
+                >
+                    ♡
+                </button>
+
+            </div>
+
+
+            <div class="image-note">
+
+                📸 Foto produk sesuai dengan menu yang tersedia
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- INFORMATION -->
+
+        <div class="product-information">
+
+
+            <span
+                class="product-category"
+                id="productCategory"
+            >
+                MAKANAN
+            </span>
+
+
+            <h1 id="productName">
+                Ayam Geprek
+            </h1>
+
+
+            <div class="rating-row">
+
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+
+                <strong id="productRating">
+                    4.9
+                </strong>
+
+
+                <span>
+                    ·
+                </span>
+
+
+                <button
+                    id="reviewLink"
+                    class="review-link"
+                >
+                    128 ulasan
+                </button>
+
+
+                <span>
+                    ·
+                </span>
+
+
+                <span
+                    id="productSold"
+                    class="sold-count"
+                >
+                    320+ terjual
+                </span>
+
+
+            </div>
+
+
+            <div
+                class="product-price"
+                id="productPrice"
+            >
+                Rp15.000
+            </div>
+
+
+            <p
+                class="product-description"
+                id="productDescription"
+            >
+                Ayam crispy dengan sambal geprek pedas gurih.
+            </p>
+
+
+
+            <!-- INFORMATION BOX -->
+
+            <div class="info-box">
+
+
+                <div class="info-item">
+
+                    <span class="info-icon">
+                        🍽️
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Porsi pas
+                        </strong>
+
+                        <small>
+                            Cocok untuk makan siang
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-icon">
+                        🔥
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Dibuat fresh
+                        </strong>
+
+                        <small>
+                            Disiapkan setelah dipesan
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="info-icon">
+                        🏫
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Ambil di kantin
+                        </strong>
+
+                        <small>
+                            Tanpa perlu antre lama
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- QUANTITY -->
+
+            <div class="order-section">
+
+
+                <div class="quantity-title">
+                    Jumlah pesanan
+                </div>
+
+
+                <div class="quantity-control">
+
+                    <button id="minusButton">
+                        −
+                    </button>
+
+                    <span id="quantity">
+                        1
+                    </span>
+
+                    <button id="plusButton">
+                        +
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- BUTTON -->
+
+            <div class="action-buttons">
+
+
+                <button
+                    class="add-cart-button"
+                    id="addCartButton"
+                >
+
+                    🛒
+
+                    <span>
+                        Tambah ke Keranjang
+                    </span>
+
+                </button>
+
+
+                <button
+                    class="buy-button"
+                    id="buyButton"
+                >
+
+                    Beli Sekarang
+                    <span>
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+            <div class="secure-info">
+
+                🔒
+                Pemesanan aman · Harga transparan · Tanpa biaya tersembunyi
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+         REVIEW
+    ================================================= -->
+
+    <section class="review-section">
+
+
+        <div class="review-header">
+
+
+            <div>
+
+                <span class="mini-label">
+                    PENDAPAT SISWA
+                </span>
+
+                <h2>
+                    Rating & Ulasan
+                </h2>
+
+                <p>
+                    Lihat pengalaman siswa yang sudah mencoba menu ini.
+                </p>
+
+            </div>
+
+
+            <div class="rating-summary">
+
+
+                <strong id="ratingLarge">
+                    4.9
+                </strong>
+
+                <div>
+
+                    <div class="stars large">
+                        ★★★★★
+                    </div>
+
+                    <span>
+                        Berdasarkan
+                        <b id="reviewTotal">
+                            128
+                        </b>
+                        ulasan
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- REVIEW SUMMARY -->
+
+        <div class="review-overview">
+
+
+            <div class="rating-bars">
+
+
+                <div class="rating-bar">
+
+                    <span>5</span>
+
+                    <div>
+                        <i style="width: 92%;"></i>
+                    </div>
+
+                    <small>
+                        92%
+                    </small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>4</span>
+
+                    <div>
+                        <i style="width: 6%;"></i>
+                    </div>
+
+                    <small>
+                        6%
+                    </small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>3</span>
+
+                    <div>
+                        <i style="width: 2%;"></i>
+                    </div>
+
+                    <small>
+                        2%
+                    </small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>2</span>
+
+                    <div>
+                        <i style="width: 0%;"></i>
+                    </div>
+
+                    <small>
+                        0%
+                    </small>
+
+                </div>
+
+
+                <div class="rating-bar">
+
+                    <span>1</span>
+
+                    <div>
+                        <i style="width: 0%;"></i>
+                    </div>
+
+                    <small>
+                        0%
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="rating-note">
+
+                <span>
+                    💬
+                </span>
+
+                <div>
+
+                    <strong>
+                        Banyak yang suka!
+                    </strong>
+
+                    <p>
+                        Mayoritas siswa memberikan rating
+                        tinggi untuk menu ini.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- COMMENTS -->
+
+        <div
+            class="reviews-list"
+            id="reviewsList"
+        ></div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         RELATED PRODUCTS
+    ================================================= -->
+
+    <section class="related-section">
+
+
+        <div class="section-title">
+
+            <div>
+
+                <span class="mini-label">
+                    MUNGKIN KAMU SUKA
+                </span>
+
+                <h2>
+                    Menu lainnya
+                </h2>
+
+            </div>
+
+
+            <a href="index.html">
+                Lihat semua →
+            </a>
+
+        </div>
+
+
+        <div
+            class="related-grid"
+            id="relatedGrid"
+        ></div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     SUPPORT MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="supportModal"
+>
+
+
+    <div class="support-card">
+
+
+        <button
+            class="modal-close"
+            id="closeSupport"
+        >
+            ×
+        </button>
+
+
+        <div class="support-icon">
+            🎧
+        </div>
+
+
+        <span class="mini-label">
+            CUSTOMER SERVICE
+        </span>
+
+
+        <h2>
+            Ada kendala dengan pesanan?
+        </h2>
+
+
+        <p>
+            Tenang, tim kami siap membantu kamu.
+            Pilih bantuan yang kamu perlukan.
+        </p>
+
+
+        <div class="support-list">
+
+
+            <button>
+
+                💬
+
+                <div>
+
+                    <strong>
+                        Chat Customer Service
+                    </strong>
+
+                    <small>
+                        Respon sekitar 1–5 menit
+                    </small>
+
+                </div>
+
+                →
+
+            </button>
+
+
+            <button>
+
+                📦
+
+                <div>
+
+                    <strong>
+                        Kendala Pesanan
+                    </strong>
+
+                    <small>
+                        Pesanan belum diterima atau salah
+                    </small>
+
+                </div>
+
+                →
+
+            </button>
+
+
+            <button>
+
+                💳
+
+                <div>
+
+                    <strong>
+                        Kendala Pembayaran
+                    </strong>
+
+                    <small>
+                        Pembayaran gagal atau bermasalah
+                    </small>
+
+                </div>
+
+                →
+
+            </button>
+
+
+        </div>
+
+
+        <div class="support-hours">
+
+            🟢 Customer Service aktif ·
+            Senin–Jumat · 07.00–15.00
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span>
+        ✓
+    </span>
+
+    <p id="toastText">
+        Produk ditambahkan
+    </p>
+
+</div>
+
+
+
+<script src="detail.js"></script>
+
+</body>
+</html>

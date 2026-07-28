@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title Admin — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">K</div>
+        <div>
+          <strong></strong>
+          <span>Admin Panel</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <p class="nav-label">MENU UTAMA</p>
+        <button class="nav-item active" data-page="dashboard"><span>⌂</span> Dashboard</button>
+        <button class="nav-item" data-page="orders"><span>▣</span> Pesanan</button>
+        <button class="nav-item" data-page="products"><span>◫</span> Menu Makanan</button>
+        <button class="nav-item" data-page="customers"><span>♙</span> Pelanggan</button>
+
+        <p class="nav-label">LAYANAN</p>
+        <button class="nav-item" data-page="payments"><span>◈</span> Pembayaran</button>
+        <button class="nav-item" data-page="reviews"><span>★</span> Rating & Ulasan</button>
+        <button class="nav-item" data-page="support"><span>◌</span> Customer Service <b class="badge">3</b></button>
+
+        <p class="nav-label">SISTEM</p>
+        <button class="nav-item" data-page="settings"><span>⚙</span> Pengaturan</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="school-card">
+          <div class="school-icon">🏫</div>
+          <div>
+            <strong>SMK Nusantara</strong>
+            <small>Sistem Kantin Digital</small>
+          </div>
+        </div>
+        <button class="logout" id="logoutBtn">↪ Keluar Admin</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="top-title">
+          <button class="mobile-menu" id="mobileMenu">☰</button>
+          <div>
+            <span class="eyebrow">SELAMAT DATANG KEMBALI</span>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" id="notificationBtn" title="Notifikasi">♧<i></i></button>
+          <div class="admin-profile">
+            <div class="avatar">AD</div>
+            <div>
+              <strong>Admin Kantin</strong>
+              <span>Administrator</span>
+            </div>
+            <span class="chevron">⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="page active-page" id="dashboard">
+          <div class="welcome-row">
+            <div>
+              <h2>Ringkasan hari ini 👋</h2>
+              <p>Pantau aktivitas kantin dan pesanan siswa secara real-time.</p>
+            </div>
+            <button class="primary-btn" id="addProductTop">＋ Tambah Menu</button>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-icon orange">Rp</div>
+              <div><span>Total Pendapatan</span><strong>Rp 4.285.000</strong><small class="up">↑ 12,8% dari kemarin</small></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon blue">▣</div>
+              <div><span>Total Pesanan</span><strong>186</strong><small class="up">↑ 8,4% dari kemarin</small></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon green">✓</div>
+              <div><span>Pesanan Selesai</span><strong>162</strong><small class="up">87,1% tingkat selesai</small></div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon purple">★</div>
+              <div><span>Rating Kantin</span><strong>4,8 / 5</strong><small class="up">↑ 0,2 bulan ini</small></div>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <section class="panel chart-panel">
+              <div class="panel-head">
+                <div><h3>Penjualan Mingguan</h3><p>Performa pendapatan 7 hari terakhir</p></div>
+                <select id="chartPeriod"><option>7 Hari</option><option>30 Hari</option></select>
+              </div>
+              <div class="chart">
+                <div class="y-labels"><span>Rp 1,2 jt</span><span>Rp 900 rb</span><span>Rp 600 rb</span><span>Rp 300 rb</span><span>Rp 0</span></div>
+                <div class="chart-area">
+                  <div class="gridline"></div><div class="gridline"></div><div class="gridline"></div><div class="gridline"></div>
+                  <div class="bars">
+                    <div class="bar-col"><b style="height:42%"></b><span>Sen</span></div>
+                    <div class="bar-col"><b style="height:62%"></b><span>Sel</span></div>
+                    <div class="bar-col"><b style="height:54%"></b><span>Rab</span></div>
+                    <div class="bar-col"><b style="height:78%"></b><span>Kam</span></div>
+                    <div class="bar-col"><b style="height:70%"></b><span>Jum</span></div>
+                    <div class="bar-col"><b style="height:88%"></b><span>Sab</span></div>
+                    <div class="bar-col today"><b style="height:96%"></b><span>Min</span></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-head"><div><h3>Menu Terlaris</h3><p>Hari ini</p></div><button class="text-btn" data-page-link="products">Lihat semua →</button></div>
+              <div class="top-products">
+                <div class="product-mini"><img src="assets/products/seblak.webp">" alt="" srcset=""><div><strong>seblak</strong><span>68 terjual</span></div><b>Rp 15.000</b></div>
+                <div class="product-mini"><img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=120&q=80"><div><strong>Mie Goreng</strong><span>51 terjual</span></div><b>Rp 12.000</b></div>
+                <div class="product-mini"><img src="https://images.unsplash.com/photo-1554866585-cd94860890b7?auto=format&fit=crop&w=120&q=80"><div><strong>Es Teh Manis</strong><span>47 terjual</span></div><b>Rp 5.000</b></div>
+              </div>
+            </section>
+          </div>
+
+          <section class="panel recent-panel">
+            <div class="panel-head"><div><h3>Pesanan Terbaru</h3><p>Pesanan yang baru masuk ke sistem</p></div><button class="text-btn" data-page-link="orders">Lihat semua →</button></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>ID PESANAN</th><th>SISWA</th><th>MENU</th><th>TOTAL</th><th>PEMBAYARAN</th><th>STATUS</th><th></th></tr></thead>
+                <tbody id="recentOrders">
+                  <tr><td><b>#KN-1086</b><small>18:42</small></td><td><div class="student"><span>AR</span><b>Andi Ramadhan</b></div></td><td>seblak + Es Teh</td><td><b>Rp 20.000</b></td><td><span class="pay qris">QRIS</span></td><td><span class="status processing">Diproses</span></td><td><button class="dots">•••</button></td></tr>
+                  <tr><td><b>#KN-1085</b><small>18:35</small></td><td><div class="student"><span>NS</span><b>Nabila Sari</b></div></td><td>Ayam Geprek + Air Mineral</td><td><b>Rp 21.000</b></td><td><span class="pay gopay">GoPay</span></td><td><span class="status ready">Siap Diambil</span></td><td><button class="dots">•••</button></td></tr>
+                  <tr><td><b>#KN-1084</b><small>18:31</small></td><td><div class="student"><span>RF</span><b>Rizky Fajar</b></div></td><td>Mie Goreng + Es Jeruk</td><td><b>Rp 18.000</b></td><td><span class="pay dana">DANA</span></td><td><span class="status done">Selesai</span></td><td><button class="dots">•••</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+
+        <section class="page" id="orders">
+          <div class="section-head"><div><h2>Manajemen Pesanan</h2><p>Kelola seluruh pesanan kantin dari satu tempat.</p></div></div>
+          <div class="toolbar"><div class="search-box">⌕ <input placeholder="Cari ID pesanan atau nama siswa..." id="orderSearch"></div><select><option>Semua Status</option><option>Diproses</option><option>Siap Diambil</option><option>Selesai</option></select><button class="primary-btn">＋ Pesanan Manual</button></div>
+          <section class="panel"><div class="table-wrap"><table><thead><tr><th>ID</th><th>SISWA</th><th>MENU</th><th>TOTAL</th><th>METODE</th><th>STATUS</th><th>AKSI</th></tr></thead><tbody id="ordersTable"></tbody></table></div></section>
+        </section>
+
+        <section class="page" id="products">
+          <div class="section-head"><div><h2>Menu Makanan & Minuman</h2><p>Atur katalog, stok, harga, dan status menu kantin.</p></div><button class="primary-btn" id="addProductBtn">＋ Tambah Menu</button></div>
+          <div class="toolbar"><div class="search-box">⌕ <input placeholder="Cari nama menu..." id="productSearch"></div><select id="categoryFilter"><option>Semua Kategori</option><option>Makanan</option><option>Minuman</option><option>Camilan</option></select><select><option>Terlaris</option><option>Harga Termurah</option><option>Harga Tertinggi</option></select></div>
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="page" id="customers">
+          <div class="section-head"><div><h2>Pelanggan</h2><p>Data siswa yang aktif menggunakan KantinKu.</p></div></div>
+          <section class="panel"><div class="customer-list" id="customerList"></div></section>
+        </section>
+
+        <section class="page" id="payments">
+          <div class="section-head"><div><h2>Pembayaran</h2><p>Monitor transaksi QRIS, e-wallet, dan bank.</p></div></div>
+          <div class="payment-grid">
+            <div class="payment-method"><strong>QRIS</strong><span>98 transaksi</span><b>Rp 1.925.000</b></div>
+            <div class="payment-method"><strong>GoPay</strong><span>37 transaksi</span><b>Rp 842.000</b></div>
+            <div class="payment-method"><strong>DANA</strong><span>28 transaksi</span><b>Rp 611.000</b></div>
+            <div class="payment-method"><strong>OVO</strong><span>15 transaksi</span><b>Rp 337.000</b></div>
+            <div class="payment-method"><strong>Bank BCA</strong><span>5 transaksi</span><b>Rp 198.000</b></div>
+            <div class="payment-method"><strong>Bank BRI</strong><span>3 transaksi</span><b>Rp 126.000</b></div>
+          </div>
+        </section>
+
+        <section class="page" id="reviews">
+          <div class="section-head"><div><h2>Rating & Ulasan</h2><p>Kelola pengalaman siswa dan tanggapan terhadap menu.</p></div></div>
+          <div class="review-summary"><div><strong>4,8</strong><span>★★★★★</span><small>Dari 1.284 ulasan</small></div><div class="rating-bars"><p>5 ★ <i><b style="width:90%"></b></i> 1.120</p><p>4 ★ <i><b style="width:65%"></b></i> 102</p><p>3 ★ <i><b style="width:28%"></b></i> 36</p></div></div>
+          <div class="review-list">
+            <article class="review"><div class="review-avatar">AS</div><div><b>Aulia Salsabila</b><span class="stars">★★★★★</span><p>"seblak enak, porsinya pas dan pesanan cepat siap."</p><small>Untuk seblak · 12 menit lalu</small></div></article>
+            <article class="review"><div class="review-avatar">DF</div><div><b>Dimas Firmansyah</b><span class="stars">★★★★★</span><p>"Pembayaran QRIS gampang banget. Semoga pilihan minuman ditambah."</p><small>Untuk Es Teh Manis · 38 menit lalu</small></div></article>
+          </div>
+        </section>
+
+        <section class="page" id="support">
+          <div class="section-head"><div><h2>Customer Service</h2><p>Bantu siswa yang mengalami kendala pemesanan.</p></div><span class="online"><i></i> CS Online</span></div>
+          <div class="support-layout"><div class="ticket-list" id="ticketList"></div><div class="chat-panel"><div class="chat-head"><div class="avatar">NS</div><div><b>Nabila Sari</b><span>Pesanan #KN-1085</span></div></div><div class="messages"><div class="msg user-msg">Kak, pesanan saya sudah bisa diambil belum?</div><div class="msg admin-msg">Halo Nabila 👋 Pesanan #KN-1085 sudah siap diambil di kasir ya.</div></div><div class="chat-input"><input placeholder="Tulis balasan..."><button>➤</button></div></div></div>
+        </section>
+
+        <section class="page" id="settings">
+          <div class="section-head"><div><h2>Pengaturan</h2><p>Konfigurasi dasar sistem KantinKu.</p></div></div>
+          <section class="panel settings-panel">
+            <label>Nama Kantin <input value="KantinKu SMK Nusantara"></label>
+            <label>Jam Operasional <input value="07:00 - 16:00"></label>
+            <label>Nomor Customer Service <input value="+62 812-3456-7890"></label>
+            <label class="switch-row">Terima Pesanan Online <input type="checkbox" checked><i></i></label>
+            <button class="primary-btn" id="saveSettings">Simpan Pengaturan</button>
+          </section>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal" id="productModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal">×</button>
+      <h2>Tambah Menu Baru</h2><p>Masukkan informasi menu kantin.</p>
+      <form id="productForm">
+        <label>Nama Menu<input required name="name" placeholder="Contoh: Bakso Kuah"></label>
+        <div class="form-row"><label>Kategori<select name="category"><option>Makanan</option><option>Minuman</option><option>Camilan</option></select></label><label>Harga<input required name="price" type="number" placeholder="12000"></label></div>
+        <label>URL Foto<input name="image" placeholder="https://..."></label>
+        <label>Stok<input required name="stock" type="number" value="20"></label>
+        <button class="primary-btn full" type="submit">Simpan Menu</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">✓ Perubahan berhasil disimpan</div>
+  <script src="admin.js"></script>
+</body>
+</html>

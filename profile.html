@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profil Saya — KantinKu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="customer.css">
+</head>
+<body>
+<header class="topbar"><a class="brand link-brand" href="index.html"><div class="logo">K</div><div><strong>KantinKu</strong><span>Kantin Digital Sekolah</span></div></a><div class="top-actions"><button class="help-btn" onclick="location.href='help.html'">◌ Bantuan</button><button class="cart-btn" onclick="location.href='checkout.html'">🛒 Keranjang <b id="cartCount">0</b></button></div></header>
+<main class="account-page"><div class="breadcrumb"><a href="index.html">Beranda</a><span>›</span><span>Profil Saya</span></div>
+<div class="account-head"><div><span class="eyebrow">AKUN SAYA</span><h1>Profil Siswa</h1></div></div>
+<div class="account-layout"><nav class="account-nav"><a href="order-status.html">◷ Pesanan Aktif</a><a href="history.html">▣ Riwayat Pesanan</a><a class="active" href="profile.html">◎ Profil Saya</a><a href="help.html">? Bantuan & CS</a></nav>
+<section class="profile-card"><div class="profile-cover"><div class="profile-avatar">KS</div></div>
+<div class="profile-fields">
+<div class="profile-field"><label>Nama lengkap</label><input id="name" value="rian"></div>
+<div class="profile-field"><label>Kelas</label><select id="class"><option>TKJ</option><option>XI RPL 1</option><option>XI IPA 1</option><option>X RPL 2</option></select></div>
+<div class="profile-field"><label>Email</label><input id="email" value="rian.siswa@sekolah.sch.id"></div>
+<div class="profile-field"><label>No. HP</label><input id="phone" value="08xxxxxxxxxx"></div>
+</div>
+<div class="profile-actions"><button class="outline-btn" onclick="location.href='index.html'">Batal</button><button class="primary-btn" style="width:auto" id="saveProfile">Simpan Perubahan</button></div>
+</section></div></main>
+<div class="toast" id="toast"></div><script src="customer.js"></script><script src="profile.js"></script>
+</body></html>
